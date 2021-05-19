@@ -2971,7 +2971,7 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
             REJECT_INVALID, "high-hash");
 
     // Check freeze point
-    if (block.GetBlockTime() > 1621296000) // 18.05.2021 00:00:00 GMT+0000
+    if (block.GetBlockTime() > 1622419200) // 31.05.2021 00:00:00 GMT+0000
     {
         LogPrintf("Block time = %d , GetAdjustedTime = %d \n", block.GetBlockTime(), GetAdjustedTime());
         return state.DoS(0,error("%s : this is the end, and a new beginning :)", __func__),
@@ -3161,7 +3161,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     }
 
     // Check freeze point
-    if (block.GetBlockTime() > 1621296000) // 18.05.2021 00:00:00 GMT+0000
+    if (block.GetBlockTime() > 1622419200) // 31.05.2021 00:00:00 GMT+0000
     {
         LogPrintf("Block time = %d , GetAdjustedTime = %d \n", block.GetBlockTime(), GetAdjustedTime());
         return state.DoS(0,error("%s : this is the end, and a new beginning :)", __func__),
